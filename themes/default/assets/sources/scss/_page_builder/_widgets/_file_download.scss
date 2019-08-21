@@ -1,0 +1,50 @@
+.file_download {
+
+  .download-button {
+    border-radius: 3px;
+    background-color: $web_color_8;
+    padding: 18px 18px 18px 18px;
+
+
+    .download-button-icon,
+    .download-button-details,
+    .download-button-action {
+      display: inline-block;
+    }
+
+    .download-button-details {
+      width: 100%;
+
+      .download-button-details-text {
+        @include fontSize(18);
+        color: $web_color_4;
+      }
+
+      .download-button-details-file_size {
+        font-size: 12px;
+        color: $web_color_4;
+      }
+    }
+
+    .download-button-action {
+      float: right;
+    }
+
+    .download-button-icon {
+      width: 39px;
+      margin-right: 48px;
+      img {
+        max-height: 100%;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      .download-button-action {
+        display: block;
+        float: none;
+        margin-top: 20px;
+        text-align: left;
+      }
+    }
+  }
+}

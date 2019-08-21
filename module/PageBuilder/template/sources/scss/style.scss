@@ -1,0 +1,572 @@
+// ########## Config Import ########## //
+@import "../../../../../themes/admin/assets/sources/scss/_configs/variables";
+@import "../../../../../themes/admin/assets/sources/scss/_configs/mixins";
+
+.page-builder {
+
+  .widget-content-hide {
+    display: none;
+  }
+
+  .page-builder-group {
+    position: relative;
+    border: 3px dotted $color_6;
+    padding: 10px;
+    margin: 20px 0 20px 0;
+
+
+    &:before {
+      content: "Page Builder";
+      text-transform: uppercase;
+      position: absolute;
+      top: -15px;
+      left: 0;
+      color: $color_8;
+      font-size: 12px;
+      font-weight: $font-weight-bold;
+      background: $color_5;
+      padding: 5px 5px 5px 5px;
+    }
+
+    .button-group {
+      text-align: right;
+      margin-top: 15px;
+
+      .btn {
+        padding: 5px 10px;
+        font-size: 12px;
+        min-width: auto;
+        line-height: 1;
+      }
+    }
+
+    .repeater-container {
+      border-bottom: 3px solid $color_3;
+      padding-bottom: 15px;
+
+      .repeater {
+        padding: 5px 10px;
+        font-size: 12px;
+        min-width: auto;
+        line-height: 1;
+      }
+    }
+
+    .widget-group {
+      border-bottom: 3px solid $color_3;
+      padding-bottom: 25px;
+      margin-bottom: 10px;
+
+      &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+    }
+
+    .current-fields {
+      min-height: 50px;
+
+      legend {
+        font-size: 12px;
+        color: $color_2;
+        margin: 10px 0 5px 0;
+        text-transform: uppercase;
+        font-weight: $font-weight-bold;
+      }
+
+      label {
+        margin: 0;
+      }
+
+      .form-check-input {
+        cursor: pointer;
+      }
+
+      .form-control {
+        min-height: 35px;
+      }
+    }
+
+    .widget-items {
+      margin-top: 15px;
+      position: relative;
+
+      &:hover {
+        .widget-control,
+        .widget-delete {
+          span {
+            color: $color_12;
+          }
+        }
+      }
+
+      .widget-name {
+        cursor: pointer;
+        color: $color_12;
+        font-size: 12px;
+        text-align: left;
+        text-transform: uppercase;
+        font-weight: $font-weight-bold;
+        border-bottom: 2px solid;
+        margin-bottom: 15px;
+        padding-bottom: 5px;
+      }
+
+      .widget-control {
+        position: absolute;
+        left: -18px;
+        top: 2px;
+        cursor: pointer;
+        z-index: 20;
+
+        span {
+          content: "\2212";
+          display: block;
+          text-transform: uppercase;
+          color: $color_8;
+          font-size: 12px;
+          text-align: left;
+          font-weight: $font-weight-bold;
+          transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        }
+      }
+
+      .widget-delete {
+        position: absolute;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+
+        span {
+          color: $color_8;
+          font-size: 12px;
+          text-align: left;
+          font-weight: $font-weight-bold;
+          transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        }
+      }
+
+      .wi {
+        border: 2px dotted $color_3;
+        padding: 10px;
+        margin: 0 0 10px 0;
+        position: relative;
+      }
+
+      .wi-remove {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        cursor: pointer;
+
+        &:after {
+          content: "Remove";
+          display: block;
+          text-transform: uppercase;
+
+          color: $color_4;
+          font-size: 12px;
+          text-align: left;
+          font-weight: $font-weight-bold;
+
+        }
+      }
+
+      .widget-items-list {
+        .fields-group {
+          .form-control {
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+      .object {
+        margin-bottom: 20px;
+
+        &.requiredError {
+          border-bottom: 1px solid $color_11;
+
+          &:after {
+            content: "This field is required.";
+            display: block;
+            text-align: right;
+            color: $color_11;
+            margin: 15px 0 5px;
+          }
+
+          .form-control {
+            border-color: $color_11;
+          }
+
+          label {
+            color: $color_11;
+          }
+        }
+
+        &._SELECT {
+          width: 33%;
+          display: inline-block;
+          padding-right: 30px;
+
+          &:last-child {
+            padding-right: 0;
+          }
+        }
+
+        &._LINK {
+
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .file-current {
+    border: 3px dotted $color_6;
+    padding: 5px 15px;
+    display: inline-block;
+    color: $color_12;
+    font-weight: $font-weight-bold;
+    cursor: pointer;
+    min-height: 25px;
+    margin-bottom: 10px;
+    position: relative;
+    min-width: 150px;
+  }
+
+
+  .gallery-object {
+    border: 3px dotted $color_6;
+    padding: 0;
+    display: inline-block;
+    color: $color_12;
+    font-weight: $font-weight-bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+    position: relative;
+    width: 100%;
+    min-height: 55px;
+  }
+
+  .file-select {
+    &:after {
+      content: "Select File";
+      background: $color_6;
+      text-transform: uppercase;
+      padding: 5px 15px;
+      display: inline-block;
+      color: $color_12;
+      font-weight: $font-weight-bold;
+      cursor: pointer;
+      min-width: 150px;
+      text-align: center;
+    }
+
+    &.type-gallery {
+      &:after {
+        content: "Add Picture";
+      }
+    }
+
+    &.select-image {
+      &:after {
+        content: "Select Picture";
+      }
+    }
+  }
+}
+
+.page-builder-object {
+  position: relative;
+  border: 3px dotted $color_6;
+  padding: 20px 10px 10px 10px;
+  margin: 20px 0 20px 0;
+
+  .object {
+    border: 3px dotted $color_6;
+    margin-bottom: 10px;
+    padding: 0 10px 15px 10px;
+    background: $white;
+    cursor: move;
+    position: relative;
+
+    .object-edit {
+      position: absolute;
+      right: 70px;
+      top: -11px;
+      cursor: pointer;
+
+      &:after {
+        font-weight: 600;
+        color: $color_2;
+        content: "edit";
+        display: block;
+        background: $white;
+        padding: 0 5px 0 5px;
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+    }
+
+    .object-destroy {
+      position: absolute;
+      right: 0;
+      top: -11px;
+      cursor: pointer;
+
+      &:after {
+        font-weight: 600;
+        color: $color_11;
+        content: "remove";
+        display: block;
+        background: $white;
+        padding: 0 5px 0 5px;
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+    }
+  }
+
+  &:before {
+    content: "Widget";
+    text-transform: uppercase;
+    position: absolute;
+    top: -15px;
+    left: 0;
+    color: $color_8;
+    font-size: 12px;
+    font-weight: $font-weight-bold;
+    background: $color_5;
+    padding: 5px 5px 5px 5px;
+  }
+
+  .button-group {
+    text-align: right;
+    margin-top: 15px;
+
+    .btn {
+      padding: 5px 10px;
+      font-size: 12px;
+      min-width: auto;
+      line-height: 1;
+    }
+  }
+
+  .widget-group {
+    border-bottom: 3px solid $color_3;
+    padding-bottom: 25px;
+    margin-bottom: 10px;
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .current-fields {
+    min-height: 50px;
+
+    legend {
+      font-size: 12px;
+      color: $color_2;
+      margin: 10px 0 5px 0;
+      text-transform: uppercase;
+      font-weight: $font-weight-bold;
+    }
+
+    label {
+      margin: 0;
+    }
+
+    .form-control {
+      min-height: 35px;
+    }
+  }
+
+  .gallery-placeholder {
+    border: 3px solid $color_3;
+    padding: 5px;
+    position: relative;
+
+    &:after {
+      content: "Add your images here";
+      text-transform: uppercase;
+      color: $color_8;
+      font-size: 12px;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  .image-placeholder {
+    border: 3px solid $color_3;
+    padding: 5px;
+    position: relative;
+
+    &:after {
+      content: "Image Select";
+      text-transform: uppercase;
+      color: $color_8;
+      font-size: 12px;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  .file-placeholder {
+    border: 3px solid $color_3;
+    padding: 5px;
+    position: relative;
+
+    &:after {
+      content: "File Select";
+      text-transform: uppercase;
+      color: $color_8;
+      font-size: 12px;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  .form-check {
+    input {
+      margin-top: 3px;
+    }
+
+    .radio-label {
+      margin-top: 0;
+    }
+  }
+
+  select {
+    text-transform: none !important;
+  }
+}
+
+.pageBuilderModal {
+
+  .modal-dialog {
+    max-width: 900px;
+    max-height: 90%;
+
+    .modal-content {
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+
+      img {
+        max-width: 150px;
+      }
+
+      .item {
+        margin-bottom: 25px;
+        border: 1px solid $color_3;
+        background: $color_3;
+        padding: 10px;
+
+        &:hover,
+        &.selected {
+          border: 1px solid $color_1;
+          cursor: pointer;
+        }
+
+        .image {
+          margin-bottom: 10px;
+        }
+
+        .title {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .modal-header {
+      background: $color_1;
+      line-height: 2;
+      box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .17);
+      padding: 9.5px 10px;
+      color: $white;
+      text-transform: uppercase;
+      border-radius: 0;
+
+      h5 {
+        font-size: 16px;
+      }
+
+      .close {
+        span {
+          color: $white;
+        }
+      }
+
+      .page-builder-title {
+        cursor: pointer;
+        .oi {
+          display: none;
+        }
+        &.back-active {
+          .oi {
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    .modal-body {
+      height: 80%;
+      overflow: scroll;
+      max-height: 500px;
+
+      .widgets,
+      .objects {
+        .widget {
+          padding: 10px;
+          text-transform: uppercase;
+          font-size: 14px;
+          border: 1px solid $color_3;
+          background: $color_3;
+          margin-bottom: 5px;
+          transition: all 0.25s;
+
+          margin-right: 2.5px;
+          margin-left: 2.5px;
+
+          &:hover,
+          &.selected {
+            background: $color_1;
+            color: $white;
+            cursor: pointer;
+          }
+        }
+
+        .widget-objects {
+          display: none;
+
+          .widget-object {
+            padding: 10px;
+            text-transform: uppercase;
+            font-size: 14px;
+            border: 1px solid $color_3;
+            background: $color_3;
+            margin-bottom: 5px;
+            transition: all 0.25s;
+
+            &:hover,
+            &.selected {
+              background: $color_1;
+              color: $white;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      .elements {
+        display: none;
+      }
+
+    }
+  }
+}

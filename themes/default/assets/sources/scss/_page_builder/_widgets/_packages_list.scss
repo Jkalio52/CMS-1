@@ -1,0 +1,15 @@
+.packages_list {
+  .packages_list__container {
+    .packages_list__title {
+      @include fontSize(18);
+      text-transform: uppercase;
+      font-weight: $font-weight-bold;
+    }
+
+    .packages_list__headline {
+    }
+
+    .packages_list__text {
+    }
+  }
+}

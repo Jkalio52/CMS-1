@@ -1,0 +1,191 @@
+.btn {
+  border-radius: 3px;
+  min-width: 150px;
+  padding: 8px 15px;
+  font-weight: $weight-normal;
+  border: 2px solid;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-right: 25px;
+  outline: none;
+  @include media-breakpoint-down(md) {
+    margin-right: 15px;
+    min-width: 110px;
+    padding: 4px 10px;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.btn-primary {
+    background: $web_color_1;
+    border-color: $web_color_1;
+
+    &:hover {
+      background: $web_color_6;
+      border-color: $web_color_6;
+    }
+
+    &.transparent {
+      &:hover {
+        background: transparent;
+        border-color: $web_color_6;
+        color: $web_color_6
+      }
+
+      &.reverse {
+        background: transparent;
+        border-color: $web_color_6;
+        color: $web_color_6;
+
+        &:hover {
+          color: $white;
+          background: $web_color_6;
+          border-color: $web_color_6;
+        }
+      }
+    }
+  }
+
+
+  &.btn-secondary {
+    background: $web_color_4;
+    border-color: $web_color_4;
+
+    &:hover {
+      background: $web_color_5;
+      border-color: $web_color_5;
+    }
+
+    &.transparent {
+      &:hover {
+        background: transparent;
+        border-color: $web_color_5;
+        color: $web_color_5
+      }
+
+      &.reverse {
+        background: transparent;
+        border-color: $web_color_5;
+        color: $web_color_5;
+
+        &:hover {
+          background: $web_color_5;
+          border-color: $web_color_5;
+          color: $white;
+        }
+      }
+    }
+  }
+
+
+  &.btn-success {
+    background: $web_color_14;
+    border-color: $web_color_14;
+
+    &:hover {
+      background: $web_color_15;
+      border-color: $web_color_15;
+    }
+
+    &.transparent {
+      &:hover {
+        background: transparent;
+        border-color: $web_color_15;
+        color: $web_color_15
+      }
+
+      &.reverse {
+        background: transparent;
+        border-color: $web_color_15;
+        color: $web_color_15;
+
+        &:hover {
+          background: $web_color_15;
+          border-color: $web_color_15;
+          color: $white;
+        }
+      }
+    }
+  }
+
+
+  &.btn-danger {
+    background: $web_color_10;
+    border-color: $web_color_10;
+
+    &:hover {
+      background: $web_color_9;
+      border-color: $web_color_9;
+    }
+
+    &.transparent {
+      &:hover {
+        background: transparent;
+        border-color: $web_color_10;
+        color: $web_color_10;
+      }
+
+      &.reverse {
+        background: transparent;
+        border-color: $web_color_10;
+        color: $web_color_10;
+
+        &:hover {
+          background: $web_color_9;
+          border-color: $web_color_9;
+          color: $white;
+        }
+      }
+    }
+  }
+
+
+  &.btn-warning {
+    background: $web_color_17;
+    border-color: $web_color_17;
+    color: $white;
+
+    &:hover {
+      background: $web_color_16;
+      border-color: $web_color_16;
+    }
+
+    &.transparent {
+      &:hover {
+        background: transparent;
+        border-color: $web_color_17;
+        color: $web_color_17
+      }
+
+      &.reverse {
+        background: transparent;
+        border-color: $web_color_17;
+        color: $web_color_17;
+
+        &:hover {
+          background: $web_color_16;
+          border-color: $web_color_16;
+          color: $white;
+        }
+      }
+    }
+  }
+
+
+  &.btn-link {
+    font-size: 12px;
+    background: none;
+    border: none;
+    padding: 0;
+    min-width: auto;
+    text-transform: inherit;
+  }
+}

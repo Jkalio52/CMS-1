@@ -1,0 +1,14 @@
+.pagination {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  .page-item {
+    a {
+      color: $color_7;
+    }
+    &.disabled {
+      a {
+        color: $color_2;
+      }
+    }
+  }
+}

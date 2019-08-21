@@ -1,0 +1,26 @@
+.responsive_spacing {
+  &.responsive_spacing__small { //25
+    padding: 12.5px 0;
+  }
+
+  &.responsive_spacing__medium { //50
+    padding: 25px 0;
+    @include media-breakpoint-down(sm) {
+      padding: 12.5px 0;
+    }
+  }
+
+  &.responsive_spacing__large { //100
+    padding: 50px 0;
+    @include media-breakpoint-down(md) {
+      padding: 25px 0;
+    }
+  }
+
+  &.responsive_spacing__xl { //150
+    padding: 75px 0;
+    @include media-breakpoint-down(md) {
+      padding: 35px 0;
+    }
+  }
+}

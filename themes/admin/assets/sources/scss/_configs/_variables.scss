@@ -1,0 +1,51 @@
+// ########## Colours ########## //
+$color_1: #346cb0;
+$color_2: #17a2b8;
+$color_3: #f5f5f5;
+$color_4: #fc5185;
+$color_5: #fff;
+$color_6: #ebeef1;
+$color_7: #403f4c;
+$color_8: #aeaeae;
+$color_9: #f8f9fa;
+$color_10: #ccc;
+$color_11: #c93a52;
+$color_12: #1690a6;
+$white: #fff;
+
+// ########## Bootstrap ########## //
+$blue: $color_1 !default;
+//$indigo:  #6610f2 !default;
+//$purple:  #6f42c1 !default;
+//$pink:    #e83e8c !default;
+//$red:     #dc3545 !default;
+//$orange:  #fd7e14 !default;
+//$yellow:  #ffc107 !default;
+//$green:   #28a745 !default;
+//$teal:    #20c997 !default;
+//$cyan:    #17a2b8 !default;
+
+
+// ########## Font Family ########## //
+$font_family: 'Roboto', sans-serif;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 500;
+
+// ########## Other ########## //
+$max_width: 1840px;
+$container_max_width: 1440px;
+$navWidth: 250px;
+$containerPl: 250px;
+
+//Vars
+$assetPath: "";
+
+
+$container-max-widths: (
+        sm: 540px,
+        md: 650px,
+        lg: 960px,
+        xl: 1140px
+) !default;

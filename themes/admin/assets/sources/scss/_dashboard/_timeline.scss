@@ -1,0 +1,127 @@
+.timeline-section {
+  .section-title {
+    margin-top: 0;
+    padding: 16px 0;
+    font-size: 14px;
+    font-weight: $font-weight-bold;
+  }
+
+  .timeline {
+    margin: 0;
+    padding: 0;
+    display: block
+  }
+
+  @media (min-width: 768px) {
+    .timeline {
+      padding-right: 1rem;
+      padding-left: 1rem
+    }
+  }
+
+  .timeline-heading {
+    margin-top: .25rem;
+    font-size: 1em;
+
+    .custom-control-inline {
+      vertical-align: middle;
+      margin-right: 0;
+      margin-top: -4px
+    }
+  }
+
+  @media (min-width: 768px) {
+    .timeline-heading .custom-control-inline {
+      margin-top: 0
+    }
+  }
+
+  .timeline-item {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+
+    &:after {
+      display: block;
+      clear: both;
+      content: ""
+    }
+  }
+
+
+  .timeline-item:first-child .timeline-body,
+  .timeline-item:first-child .timeline-figure {
+    padding-top: 0
+  }
+
+  .timeline-item:last-child .timeline-body,
+  .timeline-item:last-child .timeline-figure {
+    margin-bottom: 1.25rem
+  }
+
+  .timeline-figure {
+    position: relative;
+    padding: .5rem 0;
+
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 100%;
+      top: 1rem;
+      left: 50%;
+      margin-left: -1px;
+      border-left: 2px solid rgba(34, 34, 48, .1)
+    }
+
+    .tile {
+      position: relative;
+      box-shadow: 0 0 0 2px #f6f7f9;
+      z-index: 2
+    }
+  }
+
+
+  .timeline-fluid .timeline-figure {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+
+    .timeline-figure:before {
+      display: none
+    }
+
+    .timeline-body {
+      padding-top: .25rem;
+      padding-bottom: .25rem
+    }
+  }
+
+  .timeline-body {
+    width: 100%;
+    margin-left: 1.25rem;
+    padding: .5rem 0
+  }
+
+  .timeline-date {
+    font-size: .75rem;
+    color: $color_8
+  }
+
+  .timeline-circle {
+    padding: 0 3px 1px 6px;
+    border-radius: 50%;
+    color: $color_5;
+    background: $color_1;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+
+    .oi {
+      margin: auto;
+    }
+  }
+}

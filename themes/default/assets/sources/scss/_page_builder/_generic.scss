@@ -1,0 +1,103 @@
+// Generic Css
+.widget {
+  h5 {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: $weight-bold;
+    @include fontSize(15);
+    opacity: 0.5;
+  }
+
+  h2 {
+    margin-bottom: 15px;
+  }
+
+  .widget__price {
+    color: $web_color_15;
+    @include fontSize(22);
+    opacity: 1;
+  }
+
+  .widget__container {
+    margin-bottom: 25px;
+    margin-top: 25px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    .order-md-1 {
+      .widget__container {
+        padding-right: 25px;
+      }
+    }
+    .order-md-2 {
+      .widget__container {
+        padding-left: 25px;
+      }
+    }
+  }
+
+  .widget__button_group {
+    margin-top: 30px;
+    @include media-breakpoint-down(sm) {
+      .btn {
+        margin-bottom: 15px;
+
+        &:before {
+          content: '';
+          display: block;
+          width: 100%;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .widget__field_group {
+    max-width: 500px;
+    @include media-breakpoint-up(md) {
+      margin: auto;
+    }
+
+    input {
+      height: 44px;
+    }
+  }
+
+  .widget__image {
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 25px;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  input {
+    border-color: $web_color_18;
+
+    &:focus,
+    &:active {
+      outline: none !important;
+      box-shadow: none !important;
+      border-color: $web_color_19;
+    }
+  }
+
+  .form-control {
+    transition: all 0.5s;
+    border-color: $web_color_18;
+    border-radius: 2px;
+
+    &:focus {
+      border-color: $web_color_19;
+    }
+  }
+
+  strong, b {
+    font-weight: $font-weight-bold;
+  }
+}

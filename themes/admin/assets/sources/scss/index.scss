@@ -1,0 +1,33 @@
+// ########## Config Import ########## //
+@import "_configs/variables";
+@import "_configs/mixins";
+
+// ########## Bootstrap Import ########## //
+$bootstrap-sass-asset-helper: true;
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Iconic icons Import
+$icon-font-path: '/themes/admin/dist/fonts/' !default;
+@import "../../node_modules/open-iconic/font/css/open-iconic-bootstrap.scss";
+
+// File Upload Import
+@import "../../node_modules/blueimp-file-upload/css/jquery.fileupload.css";
+
+////@import "_configs/reset";
+@import "_layout/main";
+
+
+// Dashboard Only
+@import "_dashboard/main";
+@import "_dashboard/forms";
+@import "_dashboard/buttons";
+@import "_dashboard/pagination";
+@import "_dashboard/timeline";
+
+.ql-showHtml:after {
+  content: "[source]";
+}
+
+
+// Custom Modules SCSS
+//@import "../../../../../module/PageBuilder/template/assets/scss/page_builder";

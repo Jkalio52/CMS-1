@@ -1,0 +1,150 @@
+.blog {
+  // Typography
+  h1, h2, h3, h4, h5 {
+  }
+
+  a {
+    color: $web_color_4;
+  }
+
+  h5 {
+    text-transform: uppercase;
+    font-weight: $weight-bold;
+    @include fontSize(15);
+    opacity: 0.5;
+  }
+
+
+  .blog-breadcrumb {
+    //margin-bottom: 75px;
+
+    .breadcrumb {
+      background: no-repeat;
+      margin: 0;
+      padding: 30px 0 0 0;
+      text-transform: uppercase;
+      font-weight: $weight-semi-bold;
+      color: $web_color_19;
+      a {
+        color: $web_color_19;
+        text-transform: uppercase;
+        font-weight: $weight-semi-bold;
+        &:hover {
+          color: $web_color_5;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .intro {
+    -webkit-background-size: cover !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    position: relative;
+    margin-bottom: 25px;
+    &.homepage {
+      margin-bottom: 60px;
+    }
+    .overflow {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: $web_color_4;
+      opacity: 0.3;
+      z-index: 5;
+    }
+
+    .container {
+      position: relative;
+      z-index: 50;
+
+      .row {
+        &.main-row {
+          min-height: 400px;
+          @include media-breakpoint-down(md) {
+            min-height: 300px;
+          }
+          @include media-breakpoint-down(sm) {
+            min-height: 200px;
+          }
+        }
+      }
+    }
+
+    .headline {
+      padding: 50px 0 50px 0;
+
+      .blog-title {
+        color: $white;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        font-weight: $weight-bold;
+        @include fontSize(35);
+      }
+    }
+  }
+
+  .blog-body {
+    margin: 0 0 50px 0;
+
+    h1 {
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      @include fontSize(35);
+    }
+  }
+
+  .blog-articles {
+    .blog-article-widget {
+      margin-bottom: 60px;
+
+      a {
+        text-decoration: none;
+      }
+
+      .post-image {
+      }
+
+      .post-categories {
+        margin-bottom: 5px;
+
+        .post-category {
+          text-transform: uppercase;
+          font-weight: $weight-bold;
+          @include fontSize(15);
+          opacity: 0.5;
+          &:after {
+            content: "/";
+            padding: 0 2.5px 0 5px;
+          }
+          &:last-child {
+            &:after {
+              content: "";
+              padding: 0;
+            }
+          }
+          &:hover {
+            color: $web_color_4;
+            opacity: 0.8;
+          }
+        }
+      }
+
+      .post-title {
+        a {
+          @include fontSize(22);
+          color: $web_color_4;
+        }
+      }
+
+      .post-text {
+        margin-top: 15px;
+        color: $web_color_19;
+        font-weight: 300;
+        letter-spacing: .2px;
+        line-height: 1.4;
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+body {
+  //background: $web_color_3;
+  font-family: $font_family;
+  font-size: 14px;
+}
+
+a {
+  color: $web_color_4;
+  transition: all 0.25s ease-in-out;
+  &:hover {
+    color: $web_color_6;
+  }
+}
+
+img {
+  transition: all 0.25s ease-in-out;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container, .container-fluid {
+  padding-right: 50px;
+  padding-left: 50px;
+  @include media-breakpoint-down(lg) {
+    max-width: 100%;
+    padding-right: 35px;
+    padding-left: 35px;
+  }
+  @include media-breakpoint-down(md) {
+    max-width: 100%;
+    padding-right: 35px;
+    padding-left: 35px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}

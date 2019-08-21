@@ -1,0 +1,53 @@
+.blog-search-form {
+  &#blog-header-search {
+    position: relative;
+
+    .header-search {
+      margin-top: 29px;
+      display: none;
+      opacity: 1;
+      -webkit-transition: .5s ease-in-out;
+      -moz-transition: .5s ease-in-out;
+      -o-transition: .5s ease-in-out;
+      transition: .5s ease-in-out;
+      &.active {
+        display: block;
+      }
+      @include media-breakpoint-down(sm) {
+        display: inline-block;
+        width: 100%;
+      }
+      @include media-breakpoint-up(md) {
+        position: absolute;
+        right: 50px;
+      }
+
+      #s {
+        min-width: 200px;
+        border-radius: 0;
+        width: 100%;
+        box-shadow: none;
+        border: 1px solid $web_color_4;
+      }
+    }
+
+    .search-controller {
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+      @include media-breakpoint-up(md) {
+        padding: 35px 15px;
+      }
+      display: inline-block;
+      cursor: pointer;
+
+      &:before {
+        content: '';
+        background: url("../images/icons/other/search.svg");
+        display: block;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}

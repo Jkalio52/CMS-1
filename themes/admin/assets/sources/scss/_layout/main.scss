@@ -1,0 +1,91 @@
+body {
+  //background: $color_3;
+  font-family: $font_family;
+  font-size: 14px;
+}
+
+a {
+  color: $color_1;
+  transition: all 0.25s ease-in-out;
+}
+
+img {
+  transition: all 0.25s ease-in-out;
+}
+
+img {
+  max-width: 100%;
+}
+
+.dropdown-menu-arrow {
+  top: -25px;
+  left: 85%;
+  width: 0;
+  height: 0;
+  position: relative;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-width: 7px 8px;
+    border-style: solid;
+    border-color: transparent;
+    z-index: 1001;
+  }
+
+  &:after {
+    bottom: -18px;
+    right: -8px;
+    border-bottom-color: #fff;
+  }
+
+  &:before {
+    bottom: -17px;
+    right: -8px;
+    border-bottom-color: rgba(0, 0, 0, .15);
+  }
+}
+
+.container, .container-fluid {
+  padding-right: 50px;
+  padding-left: 50px;
+  @include media-breakpoint-down(xl) {
+    max-width: 1800px;
+  }
+  @include media-breakpoint-down(md) {
+    max-width: 100%;
+    padding-right: 35px;
+    padding-left: 35px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+
+.form-control {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: .5px;
+  text-align: left;
+  border: 1px solid $color_8;
+  box-shadow: none;
+  outline: 0;
+  padding: 12px;
+  min-height: 50px;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.hide-field {
+  height: 0;
+  overflow: hidden;
+  width: 0;
+}

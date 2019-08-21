@@ -1,0 +1,12 @@
+.products_list {
+  .products_list__image {
+  }
+
+  .products_list__price {
+  }
+
+
+  .products_list__title {
+    @include fontSize(25);
+  }
+}

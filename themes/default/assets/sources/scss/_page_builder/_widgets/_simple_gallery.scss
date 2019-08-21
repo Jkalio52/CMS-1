@@ -1,0 +1,22 @@
+.simple_gallery {
+  .simple_gallery__images {
+    column-gap: 15px;
+    column-count: 4;
+    @include media-breakpoint-down(lg){
+      column-count: 4;
+    }
+    @include media-breakpoint-down(md){
+      column-count: 3;
+    }
+    @include media-breakpoint-down(sm){
+      column-count: 2;
+    }
+    .simple_gallery__image {
+      margin-bottom: 15px;
+
+      a {
+        display: block;
+      }
+    }
+  }
+}

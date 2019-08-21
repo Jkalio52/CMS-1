@@ -1,0 +1,50 @@
+// ########## Colours ########## //
+$web_color_1: #3d84a8;
+$web_color_2: #08d9d6;
+$web_color_3: #3fc1c9;
+$web_color_4: #252a34;
+$web_color_5: #2b2e4a;
+$web_color_6: #364f6b;
+$web_color_7: #f5f5f5;
+$web_color_8: #eaeaea;
+$web_color_9: #ff2e63;
+$web_color_10: #fc5185;
+$web_color_11: #e84545;
+$web_color_12: #903749;
+$web_color_13: #53354a;
+$web_color_14: #62d2a2;
+$web_color_15: #1fab89;
+$web_color_16: #ff6f3c;
+$web_color_17: #ff9a3c;
+$web_color_18: #dfd3d3;
+$web_color_19: #7c7575;
+
+
+// ########## Bootstrap ########## //
+$blue: $web_color_1;
+
+
+// ########## Font Family ########## //
+$font_family: "Roboto Condensed",sans-serif;
+
+$weight-light: 300;
+$weight-normal: 400;
+$weight-semi-bold: 500;
+$weight-bold: 700;
+
+// ########## Other ########## //
+$max_width: 1840px;
+$container_max_width: 1440px;
+$navWidth: 250px;
+$containerPl: 250px;
+
+//Vars
+$assetPath: "";
+
+
+$container-max-widths: (
+        sm: 540px,
+        md: 650px,
+        lg: 960px,
+        xl: 1800px
+) !default;

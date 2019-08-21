@@ -1,0 +1,50 @@
+.dashboard {
+  .custom-btn {
+    min-width: 150px;
+    font-weight: $font-weight-normal;
+    border-radius: 2px;
+    text-transform: uppercase;
+    padding: 12px 30px;
+    @include media-breakpoint-down(sm) {
+      min-width: 120px;
+    }
+  }
+
+  .custom-btn-icon {
+    color: $color_7;
+    background: linear-gradient(180deg, $color_5, $color_9);
+    border-color: $color_10;
+    box-shadow: 0 1px 0 0 $color_9;
+    border-radius: 50%;
+    padding: 9px 10px;
+
+    &:hover {
+      box-shadow: 0 1px 0 0 $color_10;
+      text-decoration: none;
+      color: $color_1;
+    }
+
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .oi-pencil {
+      position: relative;
+      top: 2px;
+      left: 2px;
+    }
+  }
+
+  .custom-btn-link {
+    font-size: 12px;
+    font-weight: $font-weight-bold;
+    color: $color_7;
+    min-width: auto;
+    &:hover {
+      color: $color_1;
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.advanced_packages {
+  .advanced_packages__container {
+    .advanced_packages__title {
+      @include fontSize(18);
+      text-transform: uppercase;
+      font-weight: $font-weight-bold;
+    }
+
+    .advanced_packages__headline {
+      span {
+        @include fontSize(15);
+        color: $web_color_19;
+      }
+    }
+
+    .advanced_packages__text {
+    }
+  }
+}

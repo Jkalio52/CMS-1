@@ -1,0 +1,66 @@
+@mixin rounded($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin shadow($x, $y, $blur, $color) {
+  -webkit-box-shadow: $x $y $blur $color;
+  -moz-box-shadow: $x $y $blur $color;
+  box-shadow: $x $y $blur $color;
+}
+
+@mixin shadow-inset($x, $y, $blur, $color) {
+  -webkit-box-shadow: inset $x $y $blur $color;
+  -moz-box-shadow: inset $x $y $blur $color;
+  box-shadow: inset $x $y $blur $color;
+}
+
+@mixin transition($property) {
+  -webkit-transition: $property .2s ease;
+  -moz-transition: $property .2s ease;
+  -o-transition: $property .2s ease;
+  transition: $property .2s ease;
+}
+
+@mixin box-sizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@function em($target, $context: 14) {
+  @return ($target / $context) * 1em;
+}
+
+@mixin fontSize($fs) {
+  @if $fs == 35 {
+    @include media-breakpoint-down(xl) {
+      font-size: 35px;
+    }
+    @include media-breakpoint-down(lg) {
+      font-size: 30px;
+    }
+    @include media-breakpoint-down(md) {
+      font-size: 25px;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 20px;
+    }
+  } @else if $fs == 18 {
+    @include media-breakpoint-down(xl) {
+      font-size: 18px;
+    }
+    @include media-breakpoint-down(lg) {
+      font-size: 16px;
+    }
+    @include media-breakpoint-down(md) {
+      font-size: 14px;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 14px;
+    }
+  } @else {
+    font-size: $fs+px;
+  }
+}
