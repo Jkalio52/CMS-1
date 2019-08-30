@@ -83,7 +83,7 @@ class Blog extends _INIT
                     'errors'   => false,
                     'message'  => [
                         'type' => 'danger',
-                        'text' => $_TRANSLATION['user']['invalid_request']
+                        'text' => $_TRANSLATION['blog']['invalid_request']
                     ],
                     'redirect' => false
                 ]);

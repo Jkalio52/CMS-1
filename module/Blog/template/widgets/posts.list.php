@@ -13,8 +13,8 @@ if (isset($objects)): ?>
                     <table class="table">
                         <thead>
                         <tr>
-                            <th scope="col">Page Title</th>
-                            <th scope="col">Page Url</th>
+                            <th scope="col">Post Title</th>
+                            <th scope="col">Post Url</th>
                             <th scope="col">Status</th>
                             <th scope="col">Date Updated</th>
                             <th scope="col"></th>
