@@ -3,7 +3,7 @@
 if (isset($objects)): ?>
     <div class="col-sm-12">
         <div class="dashboard__widget table__widget">
-            <a href="<?= webLink('admin/users') ?>" class="dashboard__widget__title">
+            <a href="<?= webLink('admin/files') ?>" class="dashboard__widget__title">
                 <span class="oi oi-file"></span> Files
             </a>
             <div class="table-responsive">
@@ -31,7 +31,7 @@ if (isset($objects)): ?>
                                        class="btn-icon custom-btn-icon">
                                         <span class="oi oi-eye"></span>
                                     </a>
-                                    <a href="<?= (isset($_APP_CONFIG['_DOMAIN_ROOT']) ? $_APP_CONFIG['_DOMAIN_ROOT'] : '') ?>admin/files?delete=<?= $ITEM['fid'] ?>&p=<?= $objects['_CURRENT_PAGE'] ?>"
+                                    <a href="<?= (isset($_APP_CONFIG['_DOMAIN_ROOT']) ? $_APP_CONFIG['_DOMAIN_ROOT'] : '') ?>admin/files?delete=<?= $ITEM['fid'] ?>"
                                        class="btn-icon custom-btn-icon">
                                         <span class="oi oi-trash"></span>
                                     </a>
@@ -41,11 +41,7 @@ if (isset($objects)): ?>
                         </tbody>
                     </table>
                 <? else: ?>
-                    <? if (_get('filter')): ?>
-                        No results available.
-                    <? else: ?>
-                        There are no files.
-                    <? endif ?>
+                    There are no files.
                 <? endif ?>
             </div>
         </div>

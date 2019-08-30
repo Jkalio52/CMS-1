@@ -25,11 +25,11 @@ if (isset($objects)): ?>
                             <td><?= $ITEM['email'] ?></td>
                             <td><?= _TIME::_STRTOTIME_TO_DATE(['_DATE' => $ITEM['date_created']]) ?></td>
                             <td class="object-option align-middle text-right">
-                                <a href="<?= (isset($_APP_CONFIG['_DOMAIN_ROOT']) ? $_APP_CONFIG['_DOMAIN_ROOT'] : '') ?>admin/users/edit/<?= $ITEM['uid'] ?>?page=<?= $objects['_CURRENT_PAGE'] ?>"
+                                <a href="<?= (isset($_APP_CONFIG['_DOMAIN_ROOT']) ? $_APP_CONFIG['_DOMAIN_ROOT'] : '') ?>admin/users/edit/<?= $ITEM['uid'] ?>"
                                    class="custom-btn-icon btn-icon">
                                     <span class="oi oi-pencil"></span>
                                 </a>
-                                <a href="<?= (isset($_APP_CONFIG['_DOMAIN_ROOT']) ? $_APP_CONFIG['_DOMAIN_ROOT'] : '') ?>admin/users/delete/<?= $ITEM['uid'] ?>?page=<?= $objects['_CURRENT_PAGE'] ?>"
+                                <a href="<?= (isset($_APP_CONFIG['_DOMAIN_ROOT']) ? $_APP_CONFIG['_DOMAIN_ROOT'] : '') ?>admin/users/delete/<?= $ITEM['uid'] ?>"
                                    class="custom-btn-icon btn-icon">
                                     <span class="oi oi-trash"></span>
                                 </a>

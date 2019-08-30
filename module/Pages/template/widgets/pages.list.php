@@ -31,11 +31,11 @@ if (isset($objects)): ?>
                                        class="btn-icon custom-btn-icon">
                                         <span class="oi oi-eye"></span>
                                     </a>
-                                    <a href="<?= (isset($_APP_CONFIG['_DOMAIN_ROOT']) ? $_APP_CONFIG['_DOMAIN_ROOT'] : '') ?>admin/pages/edit/<?= $ITEM['pid'] ?>?page=<?= $objects['_CURRENT_PAGE'] ?>"
+                                    <a href="<?= (isset($_APP_CONFIG['_DOMAIN_ROOT']) ? $_APP_CONFIG['_DOMAIN_ROOT'] : '') ?>admin/pages/edit/<?= $ITEM['pid'] ?>"
                                        class="btn-icon custom-btn-icon">
                                         <span class="oi oi-pencil"></span>
                                     </a>
-                                    <a href="<?= (isset($_APP_CONFIG['_DOMAIN_ROOT']) ? $_APP_CONFIG['_DOMAIN_ROOT'] : '') ?>admin/pages?delete=<?= $ITEM['pid'] ?>&p=<?= $objects['_CURRENT_PAGE'] ?>"
+                                    <a href="<?= (isset($_APP_CONFIG['_DOMAIN_ROOT']) ? $_APP_CONFIG['_DOMAIN_ROOT'] : '') ?>admin/pages?delete=<?= $ITEM['pid'] ?>"
                                        class="btn-icon custom-btn-icon">
                                         <span class="oi oi-trash"></span>
                                     </a>
@@ -46,15 +46,10 @@ if (isset($objects)): ?>
                         </tbody>
                     </table>
                 <? else: ?>
-                    <? if (_get('filter')): ?>
-                        No results available.
-                    <? else: ?>
-                        There are no pages created.
-                        <a href="<?= (isset($_APP_CONFIG['_DOMAIN_ROOT']) ? $_APP_CONFIG['_DOMAIN_ROOT'] : '') ?>admin/pages/add">
-                            Create your first page</a>.
-                    <? endif ?>
+                    There are no pages created.
+                    <a href="<?= (isset($_APP_CONFIG['_DOMAIN_ROOT']) ? $_APP_CONFIG['_DOMAIN_ROOT'] : '') ?>admin/pages/add">
+                        Create your first page</a>.
                 <? endif ?>
-
             </div>
         </div>
     </div>

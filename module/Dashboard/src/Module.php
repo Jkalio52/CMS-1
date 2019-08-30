@@ -94,27 +94,27 @@ class Dashboard extends _INIT
     /**
      * Admin dashboard Widgets
      * @param $name
-     * @param $location
+     * @param $position
+     * @param $dashboard
      */
-    public static function availableWidgets($name, $location)
+    public static function availableWidgets($name, $position, $dashboard = 'admin_dashboard')
     {
         global $_APP_SETTINGS;
-        if (isset($_APP_SETTINGS['admin_dashboard']) && isset($_APP_SETTINGS['admin_dashboard']['widgets'])):
-            if (isset($_APP_SETTINGS['admin_dashboard']['widgets'][$location])):
+        if (isset($_APP_SETTINGS[$dashboard]) && isset($_APP_SETTINGS[$dashboard]['widgets'])):
+            if (isset($_APP_SETTINGS[$dashboard]['widgets'][$position])):
                 $i = 0;
-                foreach ($_APP_SETTINGS['admin_dashboard']['widgets'][$location] as $key => $module):
-
+                foreach ($_APP_SETTINGS[$dashboard]['widgets'][$position] as $key => $module):
                     if (is_array($module)):
-                        if (method_exists('\_MODULE\\' . $key, $key . '_admin_dashboard_index_' . $location)):
+                        if (method_exists('\_MODULE\\' . $key, $key . $name . $position)):
                             call_user_func_array(
-                                array('\_MODULE\\' . $key, $key . $name . $location),
+                                array('\_MODULE\\' . $key, $key . $name . $position),
                                 [$module]
                             );
                         endif;
                     else:
-                        if (method_exists('\_MODULE\\' . $module, $module . '_admin_dashboard_index_' . $location)):
+                        if (method_exists('\_MODULE\\' . $module, $module . $name . $position)):
                             call_user_func_array(
-                                array('\_MODULE\\' . $module, $module . $name . $location),
+                                array('\_MODULE\\' . $module, $module . $name . $position),
                                 []
                             );
                         endif;

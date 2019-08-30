@@ -35,11 +35,11 @@ if (isset($objects)): ?>
                                            class="btn-icon custom-btn-icon">
                                             <span class="oi oi-eye"></span>
                                         </a>
-                                        <a href="<?= (isset($_APP_CONFIG['_DOMAIN_ROOT']) ? $_APP_CONFIG['_DOMAIN_ROOT'] : '') ?>admin/blog/edit-post/<?= $ITEM['bpid'] ?>?page=<?= $objects['_CURRENT_PAGE'] ?>"
+                                        <a href="<?= (isset($_APP_CONFIG['_DOMAIN_ROOT']) ? $_APP_CONFIG['_DOMAIN_ROOT'] : '') ?>admin/blog/edit-post/<?= $ITEM['bpid'] ?>"
                                            class="btn-icon custom-btn-icon">
                                             <span class="oi oi-pencil"></span>
                                         </a>
-                                        <a href="<?= (isset($_APP_CONFIG['_DOMAIN_ROOT']) ? $_APP_CONFIG['_DOMAIN_ROOT'] : '') ?>admin/blog?delete=<?= $ITEM['bpid'] ?>&p=<?= $objects['_CURRENT_PAGE'] ?>"
+                                        <a href="<?= (isset($_APP_CONFIG['_DOMAIN_ROOT']) ? $_APP_CONFIG['_DOMAIN_ROOT'] : '') ?>admin/blog?delete=<?= $ITEM['bpid'] ?>"
                                            class="btn-icon custom-btn-icon">
                                             <span class="oi oi-trash"></span>
                                         </a>
@@ -51,14 +51,10 @@ if (isset($objects)): ?>
                         </tbody>
                     </table>
                 <? else: ?>
-                    <? if (_get('filter')): ?>
-                        No results available.
-                    <? else: ?>
-                        There are no posts created.
-                        <a href="<?= (isset($_APP_CONFIG['_DOMAIN_ROOT']) ? $_APP_CONFIG['_DOMAIN_ROOT'] : '') ?>admin/blog/add-post">
-                            Create your first post
-                        </a>.
-                    <? endif ?>
+                    There are no posts created.
+                    <a href="<?= (isset($_APP_CONFIG['_DOMAIN_ROOT']) ? $_APP_CONFIG['_DOMAIN_ROOT'] : '') ?>admin/blog/add-post">
+                        Create your first post
+                    </a>.
                 <? endif ?>
             </div>
         </div>
