@@ -63,4 +63,42 @@ class Pages extends _INIT
         endif;
     }
 
+    /**
+     * Admin Widget - Top
+     * @param array $object
+     */
+    public static function Pages_admin_dashboard_index_top($object = [])
+    {
+        $objects            = new _DB\Pages();
+        self::$_VIEW->count = $objects->count('pid');
+        echo selfRender(self::$module, 'widgets/pages.stats.php');
+    }
+
+    /**
+     * Admin Widget - Bottom
+     * @param array $object
+     */
+    public static function Pages_admin_dashboard_index_bottom($object = [])
+    {
+        $objects              = new _DB\Pages();
+        $objectsList          = $objects->search(
+            [
+                'fields' => [],
+                'join'   => [
+                    'pages_details' => [
+                        'mode'    => 'left join',
+                        'table'   => 'pages_details',
+                        'conn_id' => 'pd_pid',
+                        'as'      => 'pd'
+                    ]
+                ],
+                'sort'   => [
+                    'pid' => 'desc'
+                ],
+                'limit'  => isset($object['limit']) ? $object['limit'] : 10
+            ]);
+        self::$_VIEW->objects = $objectsList;
+        echo selfRender(self::$module, 'widgets/pages.list.php');
+    }
+
 }

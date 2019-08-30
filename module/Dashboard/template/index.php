@@ -1,14 +1,23 @@
+<?php
+
+use _MODULE\Dashboard;
+
+?>
 <?= selfRender('Dashboard', 'partials/top-navigation.php') ?>
 
 <div class="container-fluid">
-    <div class="row">
+    <div class="row align-content-around align-content-center align-items-center">
         <?= selfRender('Dashboard', 'partials/left-menu.php') ?>
         <main role="main" class="col-md-12 ml-sm-auto col-lg-12 dashboard-container">
-            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h2>Dashboard</h2>
+            <div class="admin-dashboard__index__top">
+                <div class="row">
+                    <?= Dashboard::availableWidgets('_admin_dashboard_index_', 'top') ?>
+                </div>
             </div>
-            <div class="shortcuts">
-                Welcome to your dashboard.
+            <div class="admin-dashboard__index__bottom">
+                <div class="row">
+                    <?= Dashboard::availableWidgets('_admin_dashboard_index_', 'bottom') ?>
+                </div>
             </div>
         </main>
     </div>

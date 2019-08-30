@@ -27,6 +27,45 @@ class Blog extends _INIT
     }
 
     /**
+     * Admin Widget - Top
+     * @param array $object
+     */
+    public static function Blog_admin_dashboard_index_top($object = [])
+    {
+        $objects            = new _DB\BlogPost();
+        self::$_VIEW->count = $objects->count('bpid');
+        echo selfRender(self::$module, 'widgets/posts.stats.php');
+    }
+
+    /**
+     * Admin Widget - Bottom
+     * @param array $object
+     */
+    public static function Blog_admin_dashboard_index_bottom($object = [])
+    {
+        $objects     = new _DB\BlogPost();
+        $objectsList = $objects->search(
+            [
+                'fields' => [],
+                'join'   => [
+                    'blog_post_details' => [
+                        'mode'    => 'left join',
+                        'table'   => 'blog_post_details',
+                        'conn_id' => 'bpd_bpid',
+                        'as'      => 'bpd'
+                    ]
+                ],
+                'sort'   => [
+                    'bpid' => 'desc'
+                ],
+                'limit'  => isset($object['limit']) ? $object['limit'] : 10
+            ]);
+
+        self::$_VIEW->objects = $objectsList;
+        echo selfRender(self::$module, 'widgets/posts.list.php');
+    }
+
+    /**
      * Blog Management
      */
     public static function postManagementAction()

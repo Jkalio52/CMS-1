@@ -4,12 +4,32 @@
  */
 
 /**
- * Application default settings
- * Used to overwrite configurations
- *
- * For local only, create a new file named: local.settings.php
+ * Application custom settings
  */
 
 return [
-
+    'admin_dashboard' => [
+        'widgets' => [
+            'top'    => [
+                'User',
+                'Pages',
+                'Blog',
+                'FilesManagement'
+            ],
+            'bottom' => [
+                'User' => [
+                    'limit' => 10,
+                ],
+                'Pages' => [
+                    'limit' => 10
+                ],
+                'Blog' => [
+                    'limit' => 10
+                ],
+                'FilesManagement' => [
+                    'limit' => 10
+                ]
+            ]
+        ]
+    ],
 ];

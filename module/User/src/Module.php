@@ -189,6 +189,44 @@ class User extends _INIT
         endif;
     }
 
+    /**
+     * Admin Widget - Top
+     * @param array $object
+     */
+    public static function User_admin_dashboard_index_top($object = [])
+    {
+        $objects            = new _DB\User();
+        self::$_VIEW->count = $objects->count('uid');
+        echo selfRender(self::$module, 'widgets/users.stats.php');
+    }
+
+
+    /**
+     * Admin Widget - Bottom
+     * @param array $object
+     */
+    public static function User_admin_dashboard_index_bottom($object = [])
+    {
+        $objects              = new _DB\User();
+        $objectsList          = $objects->search(
+            [
+                'fields' => [],
+                'join'   => [
+                    'user_profile' => [
+                        'mode'    => 'left join',
+                        'table'   => 'user_profile',
+                        'conn_id' => 'p_uid',
+                        'as'      => 'up'
+                    ]
+                ],
+                'sort'   => [
+                    'uid' => 'desc'
+                ],
+                'limit'  => isset($object['limit']) ? $object['limit'] : 10
+            ]);
+        self::$_VIEW->objects = $objectsList;
+        echo selfRender(self::$module, 'widgets/users.list.php');
+    }
 
     /**
      * User Management

@@ -29,6 +29,38 @@ class FilesManagement extends _INIT
         $websiteTemplate = 'FilesManagement',
         $defaultStatus = 1;
 
+
+    /**
+     * Use the admin_dashboard hook
+     * @param array $object
+     */
+    public static function FilesManagement_admin_dashboard_index_top($object = [])
+    {
+        $objects            = new _DB\FilesManagement();
+        self::$_VIEW->count = $objects->count('fid');
+        echo selfRender(self::$module, 'widgets/files.stats.php');
+    }
+
+    /**
+     * Admin Widget - Bottom
+     * @param array $object
+     */
+    public static function FilesManagement_admin_dashboard_index_bottom($object = [])
+    {
+        $objects              = new _DB\FilesManagement();
+        $objectsList          = $objects->search(
+            [
+                'fields' => [],
+                'sort'   => [
+                    'fid' => 'desc'
+                ],
+                'limit'  => isset($object['limit']) ? $object['limit'] : 10
+            ]);
+
+        self::$_VIEW->objects = $objectsList;
+        echo selfRender(self::$module, 'widgets/files.list.php');
+    }
+
     /**
      * Files List
      */

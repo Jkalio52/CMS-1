@@ -23,6 +23,7 @@ $icon-font-path: '/themes/admin/dist/fonts/' !default;
 @import "_dashboard/buttons";
 @import "_dashboard/pagination";
 @import "_dashboard/timeline";
+@import "_dashboard/widgets";
 
 .ql-showHtml:after {
   content: "[source]";

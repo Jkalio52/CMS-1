@@ -292,8 +292,6 @@
       a {
         border-left: none !important;
       }
-
-
     }
   }
 }
@@ -301,6 +299,7 @@
 .dashboard-container {
   transition: padding 0.25s ease-in-out;
   padding-left: 0;
+  margin-bottom: 25px;
   @include media-breakpoint-up(md) {
     padding-left: 85px;
   }
@@ -386,6 +385,9 @@
 .dashboard {
   h2 {
     color: $color_8;
+    @include media-breakpoint-down(sm) {
+      font-size: 25px;
+    }
   }
 
   .btn {

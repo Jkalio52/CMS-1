@@ -92,6 +92,40 @@ class Dashboard extends _INIT
     }
 
     /**
+     * Admin dashboard Widgets
+     * @param $name
+     * @param $location
+     */
+    public static function availableWidgets($name, $location)
+    {
+        global $_APP_SETTINGS;
+        if (isset($_APP_SETTINGS['admin_dashboard']) && isset($_APP_SETTINGS['admin_dashboard']['widgets'])):
+            if (isset($_APP_SETTINGS['admin_dashboard']['widgets'][$location])):
+                $i = 0;
+                foreach ($_APP_SETTINGS['admin_dashboard']['widgets'][$location] as $key => $module):
+
+                    if (is_array($module)):
+                        if (method_exists('\_MODULE\\' . $key, $key . '_admin_dashboard_index_' . $location)):
+                            call_user_func_array(
+                                array('\_MODULE\\' . $key, $key . $name . $location),
+                                [$module]
+                            );
+                        endif;
+                    else:
+                        if (method_exists('\_MODULE\\' . $module, $module . '_admin_dashboard_index_' . $location)):
+                            call_user_func_array(
+                                array('\_MODULE\\' . $module, $module . $name . $location),
+                                []
+                            );
+                        endif;
+                    endif;
+                    $i++;
+                endforeach;
+            endif;
+        endif;
+    }
+
+    /**
      * Dashboard $_POST management
      */
     public static function postManagementAction()
